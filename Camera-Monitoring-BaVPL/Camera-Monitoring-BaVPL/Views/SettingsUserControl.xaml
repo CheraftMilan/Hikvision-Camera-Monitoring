@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="Camera_Monitoring_BaVPL.Views.SettingsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Camera_Monitoring_BaVPL.Views"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             mc:Ignorable="d">
+
+    <Grid Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Height="54" Margin="0,0,0,20">
+                <Label Content="Bewaartermijn opnames:" Margin="0,0,10,0" VerticalAlignment="Center" Foreground="Black"/>
+                <TextBox x:Name="txtRetentionPeriod" Width="50" Margin="0,0,10,0" Height="35" InputScope="Number"/>
+                <Label Content="dag(en)" VerticalAlignment="Center" Foreground="Black"/>
+
+                <Button x:Name="btnSaveRetentionPeriod" Width="100" Height="35" Margin="20,0,0,0" Click="BtnSaveRetentionPeriod_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="Save28" />
+                        <TextBlock Text="Opslaan" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="46" Margin="0,0,0,20">
+                <Label Content="Downloadlocatie opnames:" Margin="0,0,10,0" VerticalAlignment="Center" Foreground="Black"/>
+                <TextBox x:Name="txtFolderVid" IsEnabled="False" Width="300" Height="35" Margin="0,0,10,0" Foreground="DarkGray"/>
+                <Button x:Name="btnSelectFolder" Width="53" Height="35" Click="BtnSelectFolder_Click">
+                    <ui:SymbolIcon Symbol="Folder32"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20" HorizontalAlignment="Center">
+                <Button x:Name="btnExportCameras" Width="170" Height="35" Click="BtnExportCameras_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="ArrowDownload24" />
+                        <TextBlock Text="Exporteer cameras" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnImportCameras" Width="170" Height="35" Margin="20,0,0,0" Click="BtnImportCameras_Click">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <ui:SymbolIcon Symbol="ArrowUpload24" />
+                        <TextBlock Text="Importeer cameras" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

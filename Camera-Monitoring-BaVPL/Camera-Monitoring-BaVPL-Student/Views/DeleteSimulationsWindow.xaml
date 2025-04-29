@@ -1,0 +1,62 @@
+﻿<Window x:Class="Camera_Monitoring_BaVPL_Student.Views.DeleteSimulationsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Camera_Monitoring_BaVPL_Student.Views"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        Title="Simulaties beheren" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- For the home button -->
+            <RowDefinition Height="*"/>
+            <!-- For the rest of the content -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <!-- For left-aligned button -->
+            <ColumnDefinition Width="*"/>
+            <!-- For content area -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Home button in top-left corner -->
+        <Button x:Name="btnHome" Height="40" Width="160" Click="BtnHome_Click" 
+                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+            <StackPanel Orientation="Horizontal">
+                <ui:SymbolIcon Symbol="Home12" />
+                <TextBlock Text="Home" Margin="10,0,0,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Button>
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+
+                <Label x:Name="lblNoSimulations" Content="{Binding}"
+                       FontSize="18" 
+                       FontWeight="SemiBold" 
+                       HorizontalContentAlignment="Center" 
+                       VerticalContentAlignment="Center" 
+                       Foreground="Gray" 
+                       Margin="10,20,10,20" 
+                       Padding="10"/>
+                <ItemsControl x:Name="lstSimulations">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="25" Padding="10" Margin="5">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" />
+                                        <Button Margin="10,0,0,0" Click="DeleteSimulation_Click" Tag="{Binding Name}">
+                                            <ui:SymbolIcon Symbol="Delete28"/>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

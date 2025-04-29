@@ -1,0 +1,105 @@
+﻿<Window x:Class="Camera_Monitoring_BaVPL_Student.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Camera_Monitoring_BaVPL_Student"
+        mc:Ignorable="d"
+        Title="Student simulaties" Height="500" Width="800"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        Background="#F5F5F5"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="StandardButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="160"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0"  Margin="0,0,20,0" VerticalAlignment="Top">
+            <Button x:Name="btnDeleteSimulationsWindow" Margin="0,5,0,0" Style="{StaticResource StandardButtonStyle}" 
+         Background="Red" Click="BtnDeleteSimulationsWindow_Click">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="Settings48" />
+                    <TextBlock Text="Beheer simulaties" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnAnnotationsWindow" Margin="0,5,0,0" Style="{StaticResource StandardButtonStyle}" 
+                    Background="#4CAF50" Click="BtnAnnotationsWindow_Click">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="Folder48" />
+                    <TextBlock Text="Feedback bekijken" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <TextBlock Text="Simulatie details" FontSize="22" FontWeight="Bold" Margin="0,20,0,20"/>
+
+            <TextBlock Text="Simulatie naam" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,5"/>
+            <TextBox Name="txtRecordingName" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" 
+                     Height="30" Padding="5" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Simulatie beschrijving" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,5"/>
+            <TextBox Name="txtRecordingDescription" TextWrapping="Wrap" AcceptsReturn="True" 
+                     VerticalScrollBarVisibility="Auto" Height="100" Padding="5" Margin="0,0,0,20"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,20,0,0">
+                <Button x:Name="btnStartClass" Content="Start" Background="#4CAF50" Style="{StaticResource StandardButtonStyle}" Click="BtnStart_Click"/>
+                <Button x:Name="btnStopClass" Content="Stop" Background="#F44336" Style="{StaticResource StandardButtonStyle}" Click="BtnStop_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20,0,0,0">
+            <TextBlock x:Name="txtFeedback" Text="Feedback" FontSize="18" FontWeight="DemiBold" Margin="0,0,0,20"/>
+
+            <Button x:Name="btnGood" Style="{StaticResource StandardButtonStyle}" Background="#4CAF50" Width="200" Height="50" Click="BtnGood_Click">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="ThumbLike48" Width="30" Margin="0,0,10,0"/>
+                    <TextBlock Text="Goed" VerticalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="btnNeutral" Style="{StaticResource StandardButtonStyle}" Background="#FFA500" Width="200" Height="50" Click="BtnNeutral_Click">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="QuestionCircle48" Width="30" Margin="0,0,10,0"/>
+                    <TextBlock Text="Neutraal" VerticalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="btnBad" Style="{StaticResource StandardButtonStyle}" Background="#F44336" Width="200" Height="50" Click="BtnBad_Click">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="ThumbDislike24" Width="30" Margin="0,0,10,0"/>
+                    <TextBlock Text="Minder goed" VerticalAlignment="Center" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <Popup Name="CommentPopup" StaysOpen="False" Placement="Center" IsOpen="False">
+            <Grid Background="#80000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Border BorderBrush="Gray" BorderThickness="1" Background="White" Padding="20" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel>
+                        <TextBlock Text="Voer uw commentaar in" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                        <TextBlock Text="(Klik op OK als u geen commentaar wilt invullen):" FontSize="12" Margin="0,0,10,10"/>
+
+                        <TextBox Name="txtPopupComment" TextWrapping="Wrap" AcceptsReturn="True" 
+                                 Height="100" VerticalScrollBarVisibility="Auto" Padding="5" Margin="0,0,0,20"/>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Content="OK" Width="100" Height="30" Background="#2196F3" Foreground="White" Click="PopupOkButton_Click" Margin="5"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Popup>
+    </Grid>
+</Window>

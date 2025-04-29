@@ -1,0 +1,113 @@
+[
+  {
+    "Name": "Lokaal 2.4",
+    "Cameras": [
+      {
+        "Name": "L2.4-Dome",
+        "IpAddress": "10.216.24.1",
+        "Username": "sEqSfMSJfi4TGP2SNnQQnzd11ucJdpX4bbcSAxKT/ag=",
+        "Password": "/vM0bCIhH7M6kCEufRjMsenY3zSYxi0czXuRf9LH+mQ=",
+        "CameraType": 1
+      },
+      {
+        "Name": "L2.4-Bed1",
+        "IpAddress": "10.216.24.11",
+        "Username": "XRHUlGaLFHg1YAcTheKwjDI6RAhdJl7m07iBekb/ln4=",
+        "Password": "ZyWn+K7NFe9uZ+lCmkHKoRSIMnwLriTbe7tTIvrlRKY=",
+        "CameraType": 0
+      },
+      {
+        "Name": "L2.4-Bed3",
+        "IpAddress": "10.216.24.13",
+        "Username": "FwOuMRfIEOXMEzFE3GYJ45XMwS+EK85J/XW5836eJ7Q=",
+        "Password": "yc8Gzmfw9tqsxcl4WW7SctS6dbwZLBGR9ykNM1Tkwcw=",
+        "CameraType": 0
+      }
+    ]
+  },
+  {
+    "Name": "Lokaal 2.5",
+    "Cameras": [
+      {
+        "Name": "L2.5-Dome-Deur",
+        "IpAddress": "10.216.25.1",
+        "Username": "J8XWU4RfY0zNS+f6mrZfogkQl6vaXrPRXE59qUegrT4=",
+        "Password": "n/BhLQ/FFiyc6lrXRaYe9aUIeMHBi8xJVC9OmIwcSEk=",
+        "CameraType": 1
+      },
+      {
+        "Name": "L2.5-Dome-Raam",
+        "IpAddress": "10.216.25.2",
+        "Username": "ZHox5oa+7+RWbvlgrGN6/s49jTlc5ZHwwjjfFyV2sm0=",
+        "Password": "GycmVwj+fLiQQ5fDYR/5dFIbZhPYsfXAcJ7P5pqP7fY=",
+        "CameraType": 1
+      },
+      {
+        "Name": "L2.5-Urgentie",
+        "IpAddress": "10.216.25.11",
+        "Username": "pd69s5oNx+gOUrpDH5LE774fGGdw+OQuWzDczaJ2J00=",
+        "Password": "NpiFjQVUc8gaH5HjofcBEPinV6l9LYXFajYdhwhOm/c=",
+        "CameraType": 0
+      },
+      {
+        "Name": "L2.5-Pediatrie ",
+        "IpAddress": "10.216.25.12",
+        "Username": "CWFd1nSuvfJYqosMLpO8APjvw0u1U8vPTVnuhtUjF3M=",
+        "Password": "egvFQB6ezfaTOa7XkSNr+BguyE0btHekPOwd4Mg9SsM=",
+        "CameraType": 0
+      },
+      {
+        "Name": "L2.5-Geriatrie",
+        "IpAddress": "10.216.25.13",
+        "Username": "mSRESBp6iAA0Sqv6XtAlx0aLG4jqE/1NPPw3e8I3okY=",
+        "Password": "JW4leXj4Ft1EyLE7FJl7Rmsf6vAmK8S4sfKYjMq08sk=",
+        "CameraType": 0
+      }
+    ]
+  },
+  {
+    "Name": "Lokaal 2.7",
+    "Cameras": [
+      {
+        "Name": "L2.7-Dome",
+        "IpAddress": "10.216.27.1",
+        "Username": "rEHc7K4FoisxOD9eB0uscu5Efrd9hSQqLRJskOsXnWs=",
+        "Password": "xFPcqzU8RJLcG8CPOvYJuInhGcGMBpCcykWmWDD6ows=",
+        "CameraType": 1
+      }
+    ]
+  },
+  {
+    "Name": "Mobiel",
+    "Cameras": [
+      {
+        "Name": "L2-Mobile1-LAN",
+        "IpAddress": "10.216.20.11",
+        "Username": "+EfyPno7ejg1BzyExjupG3fkwKuM8bHzVRth+qANkyE=",
+        "Password": "zx92IGLk4VpU8L/CgwweYTeJP7oDyAMCxv/THEogh0M=",
+        "CameraType": 2
+      },
+      {
+        "Name": "L2-Mobile1-WIFI",
+        "IpAddress": "10.216.20.12",
+        "Username": "xuXE+yh9cQ7Nh7sL8yV0LKS6b0aV/6pyE2SpkyFIQdY=",
+        "Password": "seoWT1rnbkYixUldTX9C9r9ckY4qywNqIVTu5XisDbU=",
+        "CameraType": 2
+      },
+      {
+        "Name": "L2-Mobile2-LAN",
+        "IpAddress": "10.216.20.21",
+        "Username": "23a1WaNdLbgWoQFPE5gijbVYnsx9oCMv852yCMvo5iM=",
+        "Password": "Q7xGkASe2zt87kCJOqjxepdBEqKARmsx6pZ68bsAEdI=",
+        "CameraType": 2
+      },
+      {
+        "Name": "L2-Mobile2-WIFI",
+        "IpAddress": "10.216.20.22",
+        "Username": "2GVdz1+OXeIpDK9FkrzAJgRdlEkHo5o3lwEpIMhAnDE=",
+        "Password": "cpX6O0gHd3ZFOT0YLXf1nfmmYCkUQC4T1zxOpoQwTy4=",
+        "CameraType": 2
+      }
+    ]
+  }
+]
